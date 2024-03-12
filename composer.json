@@ -1,0 +1,19 @@
+{
+    "name": "arjun/mvc",
+    "description": "small mvc framework",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App/",
+            "Modules\\": "src/Modules/"
+        }
+    },
+    "authors": [
+        {
+            "name": "arq-angel",
+            "email": "87254753+arq-angel@users.noreply.github.com"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    }
+}

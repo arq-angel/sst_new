@@ -1,0 +1,12 @@
+
+lphp:S103Á"KSplit this 155 characters long line (which is greater than 120 authorized).(À¢–ûÿÿÿÿ8¸ºôíâ1
+lphp:S103Â"KSplit this 156 characters long line (which is greater than 120 authorized).(üœå×üÿÿÿÿ8¹ºôíâ1
+b	php:S1854¶"@Remove this useless assignment to local variable '$queryResult'.(ñù±ÿÿÿÿÿ8Ààøíâ1
+:php:S125$"Remove this commented out code.(§·’—8¹ºôíâ1
+:php:S125E"Remove this commented out code.(ï¹ñ8¹ºôíâ1
+@php:S125®"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
+;php:S125¨"Remove this commented out code.(ˆ¦Ã£8¹ºôíâ1
+@php:S125Ä"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
+@php:S125Ç"Remove this commented out code.(°½áéÿÿÿÿÿ8¹ºôíâ1
+@php:S125ë"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
+@php:S125•"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1

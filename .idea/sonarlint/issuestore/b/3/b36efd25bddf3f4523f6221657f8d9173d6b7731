@@ -1,0 +1,10 @@
+
+kphp:S103V"KSplit this 127 characters long line (which is greater than 120 authorized).(Áœéíúÿÿÿÿ8ƒ¨À€ã1
+kphp:S103X"KSplit this 124 characters long line (which is greater than 120 authorized).(½Ğà¤øÿÿÿÿ8ƒ¨À€ã1
+fphp:S103f"KSplit this 130 characters long line (which is greater than 120 authorized).(ÖÎ¹¦8ƒ¨À€ã1
+fphp:S103m"KSplit this 127 characters long line (which is greater than 120 authorized).(‘óñÇ8ƒ¨À€ã1
+o	php:S3776G"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(¯ÿÿ8„¨À€ã1
+:php:S125"Remove this commented out code.(ˆ×õ‰8…¨À€ã1
+:php:S125("Remove this commented out code.(ß¹º¤8…¨À€ã1
+?php:S125."Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿ8…¨À€ã1
+:php:S1259"Remove this commented out code.(éŒï8…¨À€ã1

@@ -1,0 +1,7 @@
+
+‘php:S103="KSplit this 140 characters long line (which is greater than 120 authorized).(‰óŠÃüÿÿÿÿ8²ÑÒîâ1J$a33d0929-6857-4dd9-807c-617e036c48fb
+Œphp:S103r"KSplit this 127 characters long line (which is greater than 120 authorized).(¥´î8ıë…îâ1J$bbae1022-7c08-4a7b-a222-fe337d7c7ab1
+r	php:S1481i"+Remove this unused "$title" local variable.(ÿ€–Ÿÿÿÿÿÿ8ıë…îâ1J$30eedcb5-da35-4a1f-afb1-b5d48bcb227c
+n	php:S1481j"-Remove this unused "$rootUrl" local variable.(Û²°i8ıë…îâ1J$7a994ee3-15a3-456a-8bc0-b586dbaf4458
+`php:S125N"Remove this commented out code.(ˆ¦Ã£8€Æóşâ1J$79400226-8132-4504-af96-a4eb78017e57
+“	php:S4833m"QReplace "include_once" with namespace import mechanism through the "use" keyword.(ÓÄËˆ8ıë…îâ1J$c34c92c7-e445-4184-b79c-c333a61d2020

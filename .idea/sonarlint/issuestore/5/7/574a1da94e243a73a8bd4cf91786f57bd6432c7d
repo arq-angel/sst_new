@@ -1,0 +1,12 @@
+
+kphp:S103A"KSplit this 122 characters long line (which is greater than 120 authorized).(½ÖğÇıÿÿÿÿ8Êß€ã1
+ephp:S103O"KSplit this 124 characters long line (which is greater than 120 authorized).(—Îª68Êß€ã1
+kphp:S103`"KSplit this 164 characters long line (which is greater than 120 authorized).(ÎÍ¤úøÿÿÿÿ8Êß€ã1
+fphp:S103x"KSplit this 156 characters long line (which is greater than 120 authorized).(ûÒ‡´8Êß€ã1
+o	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.(Ğİ­	8Ëß€ã1
+X	php:S1155"7Use empty() to check whether the array is empty or not.(•¢Ô‹ùÿÿÿÿ8Ëß€ã1
+S	php:S1155"7Use empty() to check whether the array is empty or not.(¹åèÿ8Ëß€ã1
+:php:S125"Remove this commented out code.(ˆ¦Ã£8Ìß€ã1
+?php:S125"Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿ8Ìß€ã1
+?php:S125"Remove this commented out code.(Öéİºÿÿÿÿÿ8Ìß€ã1
+:php:S125W"Remove this commented out code.(¸¶Â´8Ìß€ã1

@@ -1,0 +1,16 @@
+
+dWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(ñ§½W8¹ÓœÁâ1
+e	Web:S6851="IRemove redundant word "image" from the "alt" attribute of your "img" tag.(’Œü8¡¹Çÿâ1
+PWeb:AvoidCommentedOutCodeCheck["Remove this commented out code.(»‰’Ä8Ÿ€Äêâ1
+UWeb:AvoidCommentedOutCodeCheck\"Remove this commented out code.(ºñ¸½ûÿÿÿÿ8Ÿ€Äêâ1
+OWeb:AvoidCommentedOutCodeCheck]"Remove this commented out code.(ØşŸv8Ÿ€Äêâ1
+PWeb:AvoidCommentedOutCodeCheck^"Remove this commented out code.(‹ü­½8à³‚Üâ1
+OWeb:AvoidCommentedOutCodeCheckf"Remove this commented out code.(ÿ¾ÙS8à³‚Üâ1
+UWeb:AvoidCommentedOutCodeCheckg"Remove this commented out code.(ˆüÛ©ıÿÿÿÿ8à³‚Üâ1
+PWeb:AvoidCommentedOutCodeCheckh"Remove this commented out code.(‹ü­½8 €Äêâ1
+fphp:S103A"KSplit this 185 characters long line (which is greater than 120 authorized).(ú¬‚ò8şØÌÁâ1
+kphp:S103U"KSplit this 158 characters long line (which is greater than 120 authorized).(õú•°ùÿÿÿÿ8·úşêâ1
+fphp:S103X"KSplit this 163 characters long line (which is greater than 120 authorized).(é¤î¶8óÿêâ1
+ephp:S103]"KSplit this 137 characters long line (which is greater than 120 authorized).(ØşŸv8»€Äêâ1
+kphp:S103g"KSplit this 221 characters long line (which is greater than 120 authorized).(ˆüÛ©ıÿÿÿÿ8ö³‚Üâ1
+r	php:S4833S"QReplace "require_once" with namespace import mechanism through the "use" keyword.(´Ï ›øÿÿÿÿ8şØÌÁâ1

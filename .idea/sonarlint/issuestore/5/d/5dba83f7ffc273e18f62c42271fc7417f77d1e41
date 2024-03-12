@@ -1,0 +1,7 @@
+
+u	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.(ŸÂ¾Æúÿÿÿÿ8°³®×â1
+G	php:S2003X"&Replace "include" with "include_once".(ðù“¯ÿÿÿÿÿ8°³®×â1
+Q	php:S6600X"0Remove the parentheses from this "include" call.(ðù“¯ÿÿÿÿÿ8±³®×â1
+:php:S125"Remove this commented out code.(×ê·µ8±³®×â1
+?php:S1251"Remove this commented out code.(šåò‘úÿÿÿÿ8÷Š¡Øâ1
+m	php:S4833X"LReplace "include" with namespace import mechanism through the "use" keyword.(ðù“¯ÿÿÿÿÿ8±³®×â1
