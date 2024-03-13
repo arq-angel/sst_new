@@ -88,25 +88,9 @@
                             <input type="password" name="userPassword" id="userPassword" class="form-control form-control-lg bg-light fs-6" placeholder="Password">
                         </div>
                         <div class="input-group mt-2 mb-5 d-flex">
-<!--                            <div class="form-check me-2">-->
-<!--                                <input type="checkbox" class="form-check-input" id="formCheck">-->
-<!--                                <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me </small></label>-->
-<!--                            </div>-->
-                            <div class="forgot">
-                                <small><a href="<?= $rootUrl . '/auth/forgotPassword'?>">Forgot Password?</a></small>
-                            </div>
                         </div>
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-lg btn-primary w-100 fs-6">Login</button>
-                        </div>
-<!--                        <div class="input-group mb-3">-->
-<!--                            <button type="submit" class="btn btn-lg btn-light w-100 fs-6"><img src="../assets/images/google.png" style="width: 20px;" class="me-2" alt=""><small>Sign In with Google.</small></button>-->
-<!--                        </div>-->
-                        <div class="row">
-                            <small>Don't have account? <a href="<?= $rootUrl . '/auth/register'?>">Sign Up</a></small>
-                        </div>
-                        <div class="row">
-                            <small>Go back to home. <a href="<?= $rootUrl . '/home'?>">Home</a></small>
                         </div>
                     </form>
 

@@ -7,8 +7,9 @@ namespace App\Controllers\ApplicationControllers;
 use App\Config\Site;
 use App\Controllers\ViewControllers\ViewController;
 use Modules\CRUD\CreateRecord;
+use Modules\CRUD\StudentCreateRecord;
 use Modules\Services\CsrfProtection;
-use Modules\Services\ValidateForm;
+use Modules\Services\ValidateStudentForm;
 
 class StudentController
 {
@@ -48,17 +49,31 @@ class StudentController
                 // validate form data
                 $data = $_POST;
 
-                $errors = ValidateForm::loadValidateForm([
+                $validationResult = ValidateStudentForm::loadValidateStudentForm([
                     'controller' => 'student',
                     'data' => $data,
                 ]);
 
+                $errors = $validationResult['errors'];
+
+                // $data with studentId added in ValidateStudentForm
+                $data = $validationResult['data'];
+
+                dd($errors);
+
                 if (!$errors) {
-                    $result = CreateRecord::loadCreateRecord('student', $data);
+                    $result = StudentCreateRecord::loadStudentCreateRecord('student', $data);
 
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/student');
                         exit;
+                    }  else {
+                        self::renderStudent([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderStudent([
@@ -90,7 +105,7 @@ class StudentController
         echo "delete";
     }
 
-    public static function renderApplication(array $params = [])
+    public static function renderStudent(array $params = [])
     {
 
         $data = $params['data'] ?? [];

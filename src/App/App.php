@@ -17,6 +17,7 @@ class App
 
     public static function getRunApp(): void
     {
+
         self::runApp();
 
     }

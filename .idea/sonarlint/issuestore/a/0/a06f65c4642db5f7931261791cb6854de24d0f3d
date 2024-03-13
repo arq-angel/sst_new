@@ -1,16 +1,0 @@
-
-ŠWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(ñ§½W8ÕçšÁâ1J$bba835b2-61a0-4dc6-87d8-0806716f33fe
-‹	Web:S6851;"IRemove redundant word "image" from the "alt" attribute of your "img" tag.(’Œü8Ò±òıâ1J$06ca1867-23cb-4b41-9f77-c07bbff743da
-vWeb:AvoidCommentedOutCodeCheckˆ"Remove this commented out code.(ÿ¾ÙS8Š‚ƒÜâ1J$a6089bdb-8bd9-4414-9445-444e97b2f6f4
-|Web:AvoidCommentedOutCodeCheck‰"Remove this commented out code.(¼£Â‰øÿÿÿÿ8Š‚ƒÜâ1J$381df81d-6e46-4744-b5f8-323209f47bd0
-wWeb:AvoidCommentedOutCodeCheckŠ"Remove this commented out code.(‹ü­½8‹‚ƒÜâ1J$b6a4170b-3ed4-4a26-9151-21105ca4fd2b
-Œphp:S103?"KSplit this 181 characters long line (which is greater than 120 authorized).(ú¬‚ò8–Ôæ¿â1J$ca46ac42-d96a-46e4-84d1-5748a8ab9a74
-Œphp:S103T"KSplit this 167 characters long line (which is greater than 120 authorized).(¥åú¹8ó¿ëâ1J$849c6bf9-afca-42aa-9e18-e85ff6f4354f
-Œphp:S103Y"KSplit this 164 characters long line (which is greater than 120 authorized).(À¨’‡8ó¿ëâ1J$04eae542-aab0-4c23-87e8-27688a627ef6
-‘php:S103^"KSplit this 154 characters long line (which is greater than 120 authorized).(õú•°ùÿÿÿÿ8ó¿ëâ1J$c2edb84c-52b3-42a9-b8a2-25ae90befef6
-Œphp:S103a"KSplit this 159 characters long line (which is greater than 120 authorized).(é¤î¶8ó¿ëâ1J$e83ca6d5-0b21-4175-a2a9-d5503fcf33f7
-‘php:S103d"KSplit this 181 characters long line (which is greater than 120 authorized).(Òªã‡ûÿÿÿÿ8ó¿ëâ1J$1ee744a4-8311-4d83-89b7-655f0620a6c0
-Œphp:S103q"KSplit this 145 characters long line (which is greater than 120 authorized).(¹‘”‰8Ï·äëâ1J$12a70661-f155-4cea-b75e-154bd7e0f291
-‘php:S103t"KSplit this 152 characters long line (which is greater than 120 authorized).(Ç¤şÿÿÿÿ8ó¿ëâ1J$1d394b79-aa9a-47fa-9edd-fdbc2268a0d3
-’php:S103‰"KSplit this 199 characters long line (which is greater than 120 authorized).(¼£Â‰øÿÿÿÿ8‚ƒÜâ1J$b2865d5c-8ad0-478e-98a3-2a9f59173c74
-˜	php:S4833P"QReplace "require_once" with namespace import mechanism through the "use" keyword.(´Ï ›øÿÿÿÿ8Š¨Éëâ1J$433d29ac-afed-4e5f-a97e-204885976a67

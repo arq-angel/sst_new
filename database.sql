@@ -22,12 +22,14 @@ DROP TABLE IF EXISTS `sstapplication`;
 CREATE TABLE IF NOT EXISTS `sstapplication` (
     `applicationId` bigint NOT NULL AUTO_INCREMENT,
     `studentId` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `applicantCountry` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `courseId` bigint NOT NULL,
     `branchId` bigint DEFAULT NULL,
     `unitId` bigint DEFAULT NULL,
     `applicationDate` date DEFAULT NULL,
     `applicationStatus` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `applicationDocuments` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
+    `applicationDocumentsPath` varchar(248) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `applicationComments` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
     `applicationReviewedBy` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `applicationReviewedAt` timestamp NULL DEFAULT NULL,
@@ -103,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `sstcourse` (
     `courseCode` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `durationId` bigint DEFAULT NULL,
     `courseLevel` varchar(248) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `courseDepartmentId` varchar(248) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `courseFacultyId` varchar(248) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `courseDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
     `courseSyllabus` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
     `courseTotalCredits` int DEFAULT NULL,
@@ -140,23 +142,24 @@ CREATE TABLE IF NOT EXISTS `sstcrm` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sstdepartment`
+-- Table structure for table `sstfaculty`
 --
 
-DROP TABLE IF EXISTS `sstdepartment`;
-CREATE TABLE IF NOT EXISTS `sstdepartment` (
-    `departmentId` bigint NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `sstfaculty`;
+CREATE TABLE IF NOT EXISTS `sstfaculty` (
+    `facultyId` bigint NOT NULL AUTO_INCREMENT,
     `collegeId` bigint NOT NULL,
-    `departmentName` varchar(248) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `departmentAbbreviation` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentHOD` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
-    `departmentContact` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentEmail` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentPhone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentCreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-    `departmentUpdatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`departmentId`)
+    `facultyName` varchar(248) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `facultyAbbreviation` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyAbbreviation` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyHOD` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
+    `facultyContact` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyEmail` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyPhone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `facultyCreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    `facultyUpdatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`facultyId`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -170,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `sstduration` (
     `durationId` bigint NOT NULL AUTO_INCREMENT,
     `durationName` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
     `durationDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
-    `durationValue` int NOT NULL,
+    `durationTime` int NOT NULL,
     `durationCreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
     `durationUpdatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`durationId`)
@@ -280,6 +283,7 @@ DROP TABLE IF EXISTS `sstsession`;
 CREATE TABLE IF NOT EXISTS `sstsession` (
     `sessionId` bigint NOT NULL AUTO_INCREMENT,
     `sessionName` varchar(248) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `sessionFee` decimal(10,2) NOT NULL DEFAULT '0.00',
     `courseId` bigint DEFAULT NULL,
     `termId` bigint DEFAULT NULL,
     `sessionDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
@@ -301,7 +305,8 @@ DROP TABLE IF EXISTS `sststudent`;
 CREATE TABLE IF NOT EXISTS `sststudent` (
     `studentSN` bigint NOT NULL AUTO_INCREMENT,
     `studentId` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-    `studentName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `studentFirstName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+    `studentLastName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
     `studentRollNumber` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `studentEmail` varchar(248) COLLATE utf8mb4_unicode_ci NOT NULL,
     `studentPassword` varchar(248) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -368,7 +373,7 @@ CREATE TABLE IF NOT EXISTS `sstunit` (
     `unitId` bigint NOT NULL AUTO_INCREMENT,
     `unitName` varchar(248) COLLATE utf8mb4_unicode_ci NOT NULL,
     `unitCode` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-    `departmentId` bigint DEFAULT NULL,
+    `facultyId` bigint DEFAULT NULL,
     `unitCapacity` int DEFAULT NULL,
     `unitDescription` text CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci,
     `unitCreatedAt` timestamp NULL DEFAULT CURRENT_TIMESTAMP,

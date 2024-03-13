@@ -35,7 +35,6 @@ class UnitController
             echo "ID:" . $params['id'];
         }
 
-
     }
 
     public static function add()
@@ -66,6 +65,13 @@ class UnitController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/unit');
                         exit;
+                    } else {
+                        self::renderUnit([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderUnit([

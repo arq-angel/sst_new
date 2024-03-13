@@ -1,12 +1,15 @@
 
-kphp:S103A"KSplit this 122 characters long line (which is greater than 120 authorized).(½ÖğÇıÿÿÿÿ8Êß€ã1
-ephp:S103O"KSplit this 124 characters long line (which is greater than 120 authorized).(—Îª68Êß€ã1
-kphp:S103`"KSplit this 164 characters long line (which is greater than 120 authorized).(ÎÍ¤úøÿÿÿÿ8Êß€ã1
-fphp:S103x"KSplit this 156 characters long line (which is greater than 120 authorized).(ûÒ‡´8Êß€ã1
-o	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.(Ğİ­	8Ëß€ã1
-X	php:S1155"7Use empty() to check whether the array is empty or not.(•¢Ô‹ùÿÿÿÿ8Ëß€ã1
-S	php:S1155"7Use empty() to check whether the array is empty or not.(¹åèÿ8Ëß€ã1
-:php:S125"Remove this commented out code.(ˆ¦Ã£8Ìß€ã1
-?php:S125"Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿ8Ìß€ã1
-?php:S125"Remove this commented out code.(Öéİºÿÿÿÿÿ8Ìß€ã1
-:php:S125W"Remove this commented out code.(¸¶Â´8Ìß€ã1
+Œphp:S103<"KSplit this 122 characters long line (which is greater than 120 authorized).(ğ‘—û8¤ÊĞ²ã1J$f8964e61-be45-49cb-84a4-7900a1cc7411
+‘php:S103L"KSplit this 126 characters long line (which is greater than 120 authorized).(½ÖğÇıÿÿÿÿ8¤ÊĞ²ã1J$ac5636fb-17a9-46f5-a00b-30a873400597
+‹php:S103Z"KSplit this 128 characters long line (which is greater than 120 authorized).(—Îª68¤ÊĞ²ã1J$2267e66c-25e8-40c8-bf0d-75497c16c6c7
+‘php:S103k"KSplit this 168 characters long line (which is greater than 120 authorized).(ÎÍ¤úøÿÿÿÿ8¤ÊĞ²ã1J$87ad7569-24f9-485e-9a25-af2a95f9fa5c
+php:S103ƒ"KSplit this 160 characters long line (which is greater than 120 authorized).(ûÒ‡´8¤ÊĞ²ã1J$28ed45a7-1421-42b6-951a-95e5a8910a31
+•	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 64 to the 15 allowed.(Ğİ­	8¥ÊĞ²ã1J$71cdf323-015d-40c3-87c5-733281178028
+—	php:S1192;"VDefine a constant instead of duplicating this literal "class="form-control" " 3 times.(ò‹èP8¥ÊĞ²ã1J$c20f0a75-1a63-4374-b32d-118f04dabe92
+~	php:S1155"7Use empty() to check whether the array is empty or not.(•¢Ô‹ùÿÿÿÿ8¥ÊĞ²ã1J$755e4918-e401-4893-9413-1ba956e66ed4
+y	php:S1155"7Use empty() to check whether the array is empty or not.(¹åèÿ8¦ÊĞ²ã1J$8fed8a19-9fe9-4bc6-8975-188af0051579
+`php:S125"Remove this commented out code.(ˆ¦Ã£8¦ÊĞ²ã1J$bdbb3195-e169-445e-a139-fc90d81e5329
+ephp:S125"Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿ8¦ÊĞ²ã1J$b72b862b-edb0-4df3-89e3-5598f6c83461
+ephp:S125"Remove this commented out code.(Öéİºÿÿÿÿÿ8¦ÊĞ²ã1J$41edd241-d108-401a-8043-380aff5f14dd
+ephp:S125-"Remove this commented out code.(ğç¢©ıÿÿÿÿ8¦ÊĞ²ã1J$74077d7a-f9d6-4ec5-b899-f8a5cdd21731
+`php:S125b"Remove this commented out code.(¸¶Â´8¦ÊĞ²ã1J$ee4b505d-664a-42ff-8441-a986ac44d75e

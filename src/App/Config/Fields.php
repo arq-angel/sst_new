@@ -18,10 +18,10 @@ class Fields
             'fieldName' => 'branchName',
             'controller' => 'branch',
         ],
-        'departmentId' => [
-            'fieldId' => 'departmentId',
-            'fieldName' => 'departmentName',
-            'controller' => 'department',
+        'facultyId' => [
+            'fieldId' => 'facultyId',
+            'fieldName' => 'facultyName',
+            'controller' => 'faculty',
         ],
         'durationId' => [
             'fieldId' => 'durationId',
@@ -90,11 +90,13 @@ class Fields
         ],
     ];
 
+
+
 // add the fields in the following array to check the duplicate
     const UNIQUEFIELDS = [
         'college' => ['collegeName', 'collegeEmail', 'collegePublicEmail'],
         'branch' => [],
-        'department' => [],
+        'faculty' => [],
         'duration' => [],
         'course' => ['courseName', 'courseCode'],
         'unit' => [],
@@ -103,6 +105,7 @@ class Fields
         'scholarship' => [],
         'notification' => [],
         'student' => ['studentId'],
+        'application' => []
     ];
 
     const ACTIONS = ['add', 'edit', 'update', 'delete'];
@@ -123,7 +126,7 @@ class Fields
         'select' => ['type' => 'select', 'isRequired' => true],
         'checkbox' => ['type' => 'checkbox', 'isRequired' => true],
         'radio' => ['type' => 'radio', 'isRequired' => true],
-        'file' => ['type' => 'file', 'isRequired' => true],
+        'file' => ['type' => 'file', 'isRequired' => false, 'isMultiple' => true],
         'submit' => ['type' => 'submit', 'isRequired' => true],
         'reset' => ['type' => 'reset', 'isRequired' => false],
         'button' => ['type' => 'button', 'isRequired' => false],
@@ -224,48 +227,48 @@ class Fields
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
         ],
-        'department' => [
+        'faculty' => [
             'collegeId' => [
                 'label' => 'College:',
                 'type' => self::FIELDTYPES['number']['type'],
                 'min' => self::FIELDTYPES['number']['min'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
-            'departmentName' => [
-                'label' => 'Department Name:',
+            'facultyName' => [
+                'label' => 'Faculty Name:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
-            'departmentAbbreviation' => [
+            'facultyAbbreviation' => [
                 'label' => 'Abbreviation:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
-            'departmentHOD' => [
-                'label' => 'Head of Department:',
+            'facultyHOD' => [
+                'label' => 'Head of Faculty:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
-            'departmentContact' => [
+            'facultyContact' => [
                 'label' => 'Contact Person:',
                 'min' => self::FIELDTYPES['phoneNumber']['min'],
                 'max' => self::FIELDTYPES['phoneNumber']['max'],
                 'type' => self::FIELDTYPES['phoneNumber']['type'],
                 'isRequired' => self::FIELDTYPES['phoneNumber']['isRequired'],
             ],
-            'departmentPhone' => [
+            'facultyPhone' => [
                 'label' => 'Phone:',
                 'min' => self::FIELDTYPES['phoneNumber']['min'],
                 'max' => self::FIELDTYPES['phoneNumber']['max'],
                 'type' => self::FIELDTYPES['phoneNumber']['type'],
                 'isRequired' => self::FIELDTYPES['phoneNumber']['isRequired'],
             ],
-            'departmentEmail' => [
+            'facultyEmail' => [
                 'label' => 'Email:',
                 'type' => self::FIELDTYPES['email']['type'],
                 'isRequired' => self::FIELDTYPES['email']['isRequired'],
             ],
-            'departmentDescription' => [
+            'facultyDescription' => [
                 'label' => 'Description:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
@@ -327,8 +330,8 @@ class Fields
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
-            'courseDepartmentId' => [
-                'label' => 'Department:',
+            'courseFacultyId' => [
+                'label' => 'Faculty:',
                 'type' => self::FIELDTYPES['number']['type'],
                 'min' => self::FIELDTYPES['number']['min'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
@@ -354,8 +357,13 @@ class Fields
                 'type' => 'hidden',
                 'isRequired' => self::FIELDTYPES['hidden']['isRequired'],
             ],
-            'studentName' => [
-                'label' => 'Student Name:',
+            'studentFirstName' => [
+                'label' => 'First Name:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentLastName' => [
+                'label' => 'Last Name:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
@@ -396,10 +404,16 @@ class Fields
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
+            'studentDocuments' => [
+                'label' => 'Documents:',
+                'type' => self::FIELDTYPES['file']['type'],
+                'isRequired' => self::FIELDTYPES['file']['isRequired'],
+                'isMultiple' => self::FIELDTYPES['file']['isMultiple'],
+            ],
         ],
         'unit' => [
-            'departmentId' => [
-                'label' => 'Department:',
+            'facultyId' => [
+                'label' => 'Faculty:',
                 'type' => self::FIELDTYPES['number']['type'],
                 'min' => self::FIELDTYPES['number']['min'],
                 'isRequired' => self::FIELDTYPES['number']['isRequired'],
@@ -445,19 +459,19 @@ class Fields
             ],
             'termStartDate' => [
                 'label' => 'Term Start Date:',
-                'type' => self::FIELDTYPES['datetime']['type'],
-                'isRequired' => self::FIELDTYPES['datetime']['isRequired'],
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
             'termEndDate' => [
                 'label' => 'Term End Date:',
-                'type' => self::FIELDTYPES['datetime']['type'],
-                'isRequired' => self::FIELDTYPES['datetime']['isRequired'],
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
             'termAcademicYear' => [
                 'label' => 'Term Academic Year:',
-                'type' => self::FIELDTYPES['number']['type'],
-                'min' => self::FIELDTYPES['number']['min'],
-                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+                'type' => self::FIELDTYPES['year']['type'],
+                'min' => self::FIELDTYPES['year']['min'],
+                'isRequired' => self::FIELDTYPES['year']['isRequired'],
             ],
         ],
         'session' => [
@@ -478,6 +492,14 @@ class Fields
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],
+            'sessionFee' => [
+                'label' => 'Fee:',
+                'type' => self::FIELDTYPES['money']['type'],
+                'min' => self::FIELDTYPES['money']['min'],
+                'step' => self::FIELDTYPES['money']['step'],
+                'isRequired' => self::FIELDTYPES['money']['isRequired'],
+                'placeholder' => self::FIELDTYPES['money']['placeholder'],
+            ],
             'sessionDescription' => [
                 'label' => 'Session Description:',
                 'type' => self::FIELDTYPES['text']['type'],
@@ -485,19 +507,19 @@ class Fields
             ],
             'sessionStartDate' => [
                 'label' => 'Session Start Date:',
-                'type' => self::FIELDTYPES['datetime']['type'],
-                'isRequired' => self::FIELDTYPES['datetime']['isRequired'],
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
             'sessionEndDate' => [
                 'label' => 'Session End Date:',
-                'type' => self::FIELDTYPES['datetime']['type'],
-                'isRequired' => self::FIELDTYPES['datetime']['isRequired'],
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
             'sessionYear' => [
                 'label' => 'Session Year:',
-                'type' => self::FIELDTYPES['number']['type'],
-                'min' => self::FIELDTYPES['number']['min'],
-                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+                'type' => self::FIELDTYPES['year']['type'],
+                'min' => self::FIELDTYPES['year']['min'],
+                'isRequired' => self::FIELDTYPES['year']['isRequired'],
             ],
         ],
         'scholarship' => [
@@ -528,7 +550,7 @@ class Fields
                 'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
             'applicationDeadline' => [
-                'label' => 'Application Deadline:',
+                'label' => 'ApplicationService Deadline:',
                 'type' => self::FIELDTYPES['date']['type'],
                 'isRequired' => self::FIELDTYPES['date']['isRequired'],
             ],
@@ -536,6 +558,117 @@ class Fields
         'notification' => [
             'notificationMessage' => [
                 'label' => 'Notification Message:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+        ],
+        'viewApplication' => [
+            'studentName' => [
+                'label' => 'Name:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'applicantCountry' => [
+                'label' => 'Country:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'courseId' => [
+                'label' => 'Course:',
+                'type' => self::FIELDTYPES['number']['type'],
+                'min' => self::FIELDTYPES['number']['min'],
+                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+            ],
+            'branchId' => [
+                'label' => 'Branch:',
+                'type' => self::FIELDTYPES['number']['type'],
+                'min' => self::FIELDTYPES['number']['min'],
+                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+            ],
+            'applicationDate' => [
+                'label' => 'Applied Date:',
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
+            ],
+            'applicationStatus' => [
+                'label' => 'Status:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+        ],
+        'addApplication' => [
+            'studentFirstName' => [
+                'label' => 'First Name:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentLastName' => [
+                'label' => 'Last Name:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentEmail' => [
+                'label' => 'Email:',
+                'type' => self::FIELDTYPES['email']['type'],
+                'isRequired' => self::FIELDTYPES['email']['isRequired'],
+            ],
+            'studentPhone' => [
+                'label' => 'Phone:',
+                'min' => self::FIELDTYPES['phoneNumber']['min'],
+                'max' => self::FIELDTYPES['phoneNumber']['max'],
+                'type' => self::FIELDTYPES['phoneNumber']['type'],
+                'isRequired' => self::FIELDTYPES['phoneNumber']['isRequired'],
+            ],
+            'studentAddress' => [
+                'label' => 'Address:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentCity' => [
+                'label' => 'City:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'applicantCountry' => [
+                'label' => 'Country:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentBirthDate' => [
+                'label' => 'Birth Date:',
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
+            ],
+            'studentGender' => [
+                'label' => 'Gender:',
+                'type' => self::FIELDTYPES['text']['type'],
+                'isRequired' => self::FIELDTYPES['text']['isRequired'],
+            ],
+            'studentDocuments' => [
+                'label' => 'Documents:',
+                'type' => self::FIELDTYPES['file']['type'],
+                'isRequired' => self::FIELDTYPES['file']['isRequired'],
+                'isMultiple' => self::FIELDTYPES['file']['isMultiple'],
+            ],
+            'courseId' => [
+                'label' => 'Course:',
+                'type' => self::FIELDTYPES['number']['type'],
+                'min' => self::FIELDTYPES['number']['min'],
+                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+            ],
+            'branchId' => [
+                'label' => 'Branch:',
+                'type' => self::FIELDTYPES['number']['type'],
+                'min' => self::FIELDTYPES['number']['min'],
+                'isRequired' => self::FIELDTYPES['number']['isRequired'],
+            ],
+            'applicationDate' => [
+                'label' => 'Applied Date:',
+                'type' => self::FIELDTYPES['date']['type'],
+                'isRequired' => self::FIELDTYPES['date']['isRequired'],
+            ],
+            'applicationStatus' => [
+                'label' => 'Status:',
                 'type' => self::FIELDTYPES['text']['type'],
                 'isRequired' => self::FIELDTYPES['text']['isRequired'],
             ],

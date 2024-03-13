@@ -1,0 +1,26 @@
+/* Enhance sidebar */
+.sidebar .nav-link {
+    color: #fff; /* Adjust based on your color scheme */
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+    color: #000; /* Dark text for contrast */
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+/* Enhance navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    font-weight: bold; /* Make the brand name stand out */
+}
+
+/* General Body Enhancements */
+body {
+    background-color: #f0f2f5; /* Light grey background for a softer look */
+    color: #333; /* Dark grey text for readability */
+}

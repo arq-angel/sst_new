@@ -66,7 +66,7 @@ class HelperWebsite
         // contains the key-value pairs for the values to be inserted
         $args = $argsArray;
 
-//        dd($args);
+        dd($args);
 
         // check the $query before database insertion stops further execution of code as well
 //        dd($query);
@@ -76,9 +76,8 @@ class HelperWebsite
 
 //        dd($queryResult['result']);
 //         to debug uncomment
-//        dd($queryResult['debug']);
+        dd($queryResult['debug']);
         return $queryResult['isSuccess'];
-
     }
 
     public static function getCreateRecord(array $parameters, string $controller): bool
@@ -144,10 +143,10 @@ class HelperWebsite
 
     private static function eachRecord(string $controller, int $id): array|bool
     {
-
 //        dd($controller);
         // initialize the $tableName to use in the $query statement
         $tableName = '';
+        $id = $id ?? 0;
 
         // from the array of DBTABLELIST identify the $tableName by comparing the corresponding controller
         foreach (DBConstants::DBTABLELIST as $key => $value) {
@@ -374,7 +373,6 @@ class HelperWebsite
 
     private static function fetchColumnWithClause(string $controller, string $idFieldName, array $params)
     {
-
         // initialize the $tableName to use in the $query statement
         $tableName = '';
 
@@ -406,12 +404,12 @@ class HelperWebsite
 
             $queryResult = HelperDatabase::executeQuery($query, $args, 'read');
 
+//            dd($queryResult['result']);
+//            dd($queryResult['debug']);
             return $queryResult['result'];
-
         }
 
         return [];
-
     }
 
     public static function getFetchColumnWithClause(string $controller, string $idFieldName, array $params)
@@ -444,12 +442,64 @@ class HelperWebsite
         }
 
         return [];
-
     }
 
     public static function getViewRecordWithLimit(string $controller, int $limit, int $offset): array|string
     {
         return self::viewRecordWithLimit($controller, $limit, $offset);
+    }
+
+    private static function viewSearchWithLimit(
+        string $searchQuery,
+        string $controller,
+        int $limit,
+        int $offset
+    ): array|string {
+        // initialize the $tableName to use in the $query statement
+        $tableName = '';
+
+        // from the array of DBTABLELIST identify the $tableName by comparing the corresponding controller
+        foreach (DBConstants::DBTABLELIST as $key => $value) {
+            if ($value === $controller) {
+                $tableName = $key;
+            }
+        }
+
+        $tableColumns = [];
+        // find the columnss
+        foreach (DBConstants::DBFIELDLIST[$controller] as $key => $value) {
+            $tableColumns[] = "IFNULL($value, '')";
+        }
+
+        $columnsConcatenated = "CONCAT_WS(' ', " . implode(', ', $tableColumns) . ")";
+
+        $query = "SELECT * FROM $tableName WHERE CONCAT($columnsConcatenated) LIKE :searchQuery LIMIT $limit OFFSET $offset";
+
+        $args = [
+            ':searchQuery' => '%' . $searchQuery . '%',
+        ];
+
+//        dd($query);
+        $queryResult = HelperDatabase::executeQuery($query, $args, 'read');
+
+
+//        dd($queryResult['result']);
+//        dd($queryResult['debug']);
+
+        if ($queryResult['isSuccess']) {
+            return $queryResult['result'];
+        }
+
+        return [];
+    }
+
+    public static function getViewSearchWithLimit(
+        string $searchQuery,
+        string $controller,
+        int $limit,
+        int $offset
+    ): array|string {
+        return self::viewSearchWithLimit($searchQuery, $controller, $limit, $offset);
     }
 
 }

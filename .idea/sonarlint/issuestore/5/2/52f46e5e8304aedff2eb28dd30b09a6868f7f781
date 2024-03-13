@@ -1,0 +1,6 @@
+
+‘php:S103O"KSplit this 127 characters long line (which is greater than 120 authorized).(¥¶øöıÿÿÿÿ8ßÊ¹ã1J$586e7f19-d872-421f-9b74-03ff2a455117
+	php:S17637"GDelete this unreachable code or refactor the code to make it reachable.(ÁÓ”†ıÿÿÿÿ8àÊ¹ã1J$e89ac2df-51aa-4fee-9827-ec0c1295c746
+¦	php:S1488-"_Immediately return this expression instead of assigning it to the temporary variable "$result".(“¯Õ—ıÿÿÿÿ8áÊ¹ã1J$2150ac25-81e1-42a0-8a14-4aa6cd424dc5
+ª	php:S1488="hImmediately return this expression instead of assigning it to the temporary variable "$formattedNumber".(€Ğ×¸8áÊ¹ã1J$ac376304-1d9c-4b8b-9521-2b9210332f13
+`php:S125"Remove this commented out code.(Õ¾ÖÂ8âÊ¹ã1J$d850bc39-5a01-4607-9483-a2c968f30fd7

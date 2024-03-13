@@ -66,6 +66,13 @@ class CourseController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/course');
                         exit;
+                    } else {
+                        self::renderCourse([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderCourse([

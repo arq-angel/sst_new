@@ -1,10 +1,10 @@
 
-kphp:S103V"KSplit this 127 characters long line (which is greater than 120 authorized).(Áœéíúÿÿÿÿ8ƒ¨À€ã1
-kphp:S103X"KSplit this 124 characters long line (which is greater than 120 authorized).(½Ğà¤øÿÿÿÿ8ƒ¨À€ã1
-fphp:S103f"KSplit this 130 characters long line (which is greater than 120 authorized).(ÖÎ¹¦8ƒ¨À€ã1
-fphp:S103m"KSplit this 127 characters long line (which is greater than 120 authorized).(‘óñÇ8ƒ¨À€ã1
-o	php:S3776G"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(¯ÿÿ8„¨À€ã1
-:php:S125"Remove this commented out code.(ˆ×õ‰8…¨À€ã1
-:php:S125("Remove this commented out code.(ß¹º¤8…¨À€ã1
-?php:S125."Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿ8…¨À€ã1
-:php:S1259"Remove this commented out code.(éŒï8…¨À€ã1
+Šphp:S103V"KSplit this 127 characters long line (which is greater than 120 authorized).(ÁœéíúÿÿÿÿJ$cf5e7ed5-90d8-41f0-a0fb-353a60c69997
+Šphp:S103X"KSplit this 124 characters long line (which is greater than 120 authorized).(½Ğà¤øÿÿÿÿJ$3f2c3c4a-75f1-467c-82e7-719eb63690d9
+…php:S103f"KSplit this 130 characters long line (which is greater than 120 authorized).(ÖÎ¹¦J$f1100ee4-6243-4adb-9c10-4e5c61c648ef
+…php:S103m"KSplit this 127 characters long line (which is greater than 120 authorized).(‘óñÇJ$7de4760c-d177-4f43-805f-b8f1316af8bb
+	php:S3776G"TRefactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.(¯ÿÿJ$44d7b5c0-6fc4-4248-a7b0-bc5ae2e3076f
+Yphp:S125"Remove this commented out code.(ˆ×õ‰J$ec7e2d05-50c0-412b-bca3-43a2b27d5f5a
+Yphp:S125("Remove this commented out code.(ß¹º¤J$2b75770c-e345-49ef-a007-f423aecbcdc2
+^php:S125."Remove this commented out code.(¿ÜÀ¯ùÿÿÿÿJ$cdefb570-fd78-4734-90ce-13ebf5371c82
+Yphp:S1259"Remove this commented out code.(éŒïJ$7fc3b35b-f9dc-495b-a394-07b0d682c2f0

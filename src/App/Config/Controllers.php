@@ -16,7 +16,9 @@ class Controllers
 
     const APPLICATIONCONTROLLER_NAMESPACE = 'App\\Controllers\\ApplicationControllers\\';
 
-    const APICONTROLLER_NAMESPACE = 'App\\API\\';
+    const APICONTROLLER_NAMESPACE = 'App\\Controllers\\APIControllers\\';
+
+    const APICONTROLLERV1_NAMESPACE = 'App\\Controllers\\APIControllers\\APIControllerV1\\';
 
     const CONTROLLERS = [
         'PublicViewController' => 'PublicViewController',
@@ -26,7 +28,7 @@ class Controllers
 
         'CollegeController' => 'CollegeController',
         'BranchController' => 'BranchController',
-        'DepartmentController' => 'DepartmentController',
+        'FacultyController' => 'FacultyController',
         'DurationController' => 'DurationController',
         'CourseController' => 'CourseController',
         'SessionController' => 'SessionController',
@@ -38,12 +40,12 @@ class Controllers
         'ApplicationController' => 'ApplicationController',
         'StudentController' => 'StudentController',
 
-        'APIController' => 'APIController'
+        // API Controllers
+        'APIControllerV1' => 'APIControllerV1',
     ];
 
     const PUBLICCONTROLLERS = [
         self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
-//        self::CONTROLLER_NAMESPACE . self::CONTROLLERS['AppViewController'],
     ];
 
     const AUTHCONTROLLERS = [
@@ -55,7 +57,7 @@ class Controllers
 
         self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['CollegeController'],
         self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['BranchController'],
-        self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
+        self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
         self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DurationController'],
         self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['CourseController'],
         self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['SessionController'],
@@ -69,7 +71,7 @@ class Controllers
     ];
 
     const APICONTROLLERS = [
-        self::APICONTROLLER_NAMESPACE . self::CONTROLLERS['APIController'],
+        self::APICONTROLLERV1_NAMESPACE . self::CONTROLLERS['APIControllerV1'],
     ];
 
 
@@ -77,17 +79,14 @@ class Controllers
     // corresponding Controllers for url parsed paths
     const CORRESCONTROLLERS = [
         // home routes
+        '' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
         '/' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
-        '/home' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
-        '/about' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
-        '/contact' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['PublicViewController'],
 
         // auth routes
-        '/auth/' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
         '/auth/login' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
-        '/auth/register' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
+//        '/auth/register' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
         '/auth/logout' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
-        '/auth/forgotPassword' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
+//        '/auth/forgotPassword' => self::AUTHCONTROLLER_NAMESPACE . self::CONTROLLERS['AuthController'],
 
         // app routes
         '/app' => self::CONTROLLER_NAMESPACE . self::CONTROLLERS['AppViewController'],
@@ -110,12 +109,12 @@ class Controllers
         '/app/branch/edit/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['BranchController'],
         '/app/branch/delete/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['BranchController'],
 
-        //department routes
-        '/app/department' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
-        '/app/department/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
-        '/app/department/add' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
-        '/app/department/edit/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
-        '/app/department/delete/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DepartmentController'],
+        //faculty routes
+        '/app/faculty' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
+        '/app/faculty/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
+        '/app/faculty/add' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
+        '/app/faculty/edit/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
+        '/app/faculty/delete/{id}' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['FacultyController'],
 
         //duration routes
         '/app/duration' => self::FORMCONTROLLER_NAMESPACE . self::CONTROLLERS['DurationController'],
@@ -180,9 +179,9 @@ class Controllers
         '/app/student/edit/{id}' => self::APPLICATIONCONTROLLER_NAMESPACE . self::CONTROLLERS['StudentController'],
         '/app/student/delete/{id}' => self::APPLICATIONCONTROLLER_NAMESPACE . self::CONTROLLERS['StudentController'],
 
-        //api routes
-        '/api' => self::APICONTROLLER_NAMESPACE . self::CONTROLLERS['APIController'],
-        '/api/{request}' => self::APICONTROLLER_NAMESPACE . self::CONTROLLERS['APIController'],
+
+        'api/v1' => self::APICONTROLLERV1_NAMESPACE . self::CONTROLLERS['APIControllerV1'],
+        'api/v1/{request}' => self::APICONTROLLERV1_NAMESPACE . self::CONTROLLERS['APIControllerV1'],
 
         ];
 

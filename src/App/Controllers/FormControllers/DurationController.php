@@ -21,7 +21,6 @@ class DurationController
             'pageName' => 'duration'
         ]);
 
-
     }
 
     public static function view(array $params)
@@ -34,7 +33,6 @@ class DurationController
         if (is_int($params['id'])) {
             echo "ID:" . $params['id'];
         }
-
 
     }
 
@@ -66,6 +64,13 @@ class DurationController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/duration');
                         exit;
+                    } else {
+                        self::renderDuration([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderDuration([

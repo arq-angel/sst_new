@@ -10,16 +10,14 @@ class Routes
     // routes with corresponding methods in their respective controller
     const ROUTES = [
         // home routes
-        '/' => 'home',
-        '/home' => 'home',
-        '/about' => 'about',
-        '/contact' => 'contact',
+        '' => 'index',
+        '/' => 'index',
 
         // auth routes
         '/auth/login' => 'login',
-        '/auth/register' => 'register',
+//        '/auth/register' => 'register',
         '/auth/logout' => 'logout',
-        '/auth/forgotPassword' => 'forgotPassword',
+//        '/auth/forgotPassword' => 'forgotPassword',
 
         // app routes
         '/app' => 'appHome',
@@ -45,12 +43,12 @@ class Routes
         '/app/branch/edit/{id}' => 'edit',
         '/app/branch/delete/{id}' => 'delete',
 
-        //department routes
-        '/app/department' => 'index',
-        '/app/department/{id}' => 'view',
-        '/app/department/add' => 'add',
-        '/app/department/edit/{id}' => 'edit',
-        '/app/department/delete/{id}' => 'delete',
+        //faculty routes
+        '/app/faculty' => 'index',
+        '/app/faculty/{id}' => 'view',
+        '/app/faculty/add' => 'add',
+        '/app/faculty/edit/{id}' => 'edit',
+        '/app/faculty/delete/{id}' => 'delete',
 
         //duration routes
         '/app/duration' => 'index',
@@ -115,10 +113,13 @@ class Routes
         '/app/student/edit/{id}' => 'edit',
         '/app/student/delete/{id}' => 'delete',
 
+        // api routes
+        // both the following routes will call the same method
+        // but the second route will add extra trailing url string and in an associative array with key request
+        'api/v1' => 'processV1',
+        'api/v1/{request}' => 'processV1',
 
-        //api routes
-        '/api' => 'apiProcess',
-        '/api/{request}' => 'apiProcess',
+
 
     ];
 

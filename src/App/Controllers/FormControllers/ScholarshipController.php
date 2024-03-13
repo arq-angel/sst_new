@@ -66,6 +66,13 @@ class ScholarshipController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/scholarship');
                         exit;
+                    } else {
+                        self::renderScholarship([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderScholarship([

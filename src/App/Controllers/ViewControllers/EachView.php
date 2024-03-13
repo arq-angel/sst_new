@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+namespace App\Controllers\ViewControllers;
+use Modules\HelperWebsite;
+
 class EachView
 {
 

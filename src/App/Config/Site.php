@@ -9,6 +9,8 @@ class Site
 
     const ROOT_URL = 'http://sst.cc';
 
+    const ROOT_DIR = __DIR__ . '/../../../';
+
     const SITE = [
         'siteName' => 'SST',
     ];

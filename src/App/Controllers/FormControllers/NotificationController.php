@@ -21,7 +21,6 @@ class NotificationController
             'pageName' => 'notification'
         ]);
 
-
     }
 
     public static function view(array $params)
@@ -34,7 +33,6 @@ class NotificationController
         if (is_int($params['id'])) {
             echo "ID:" . $params['id'];
         }
-
 
     }
 
@@ -66,6 +64,13 @@ class NotificationController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/notification');
                         exit;
+                    } else {
+                        self::renderNotification([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderNotification([
@@ -114,6 +119,7 @@ class NotificationController
             'data' => $data,
             'errors' => $errors,
         ]);
+
     }
 
 }

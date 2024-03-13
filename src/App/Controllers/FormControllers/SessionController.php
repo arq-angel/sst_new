@@ -35,7 +35,6 @@ class SessionController
             echo "ID:" . $params['id'];
         }
 
-
     }
 
     public static function add()
@@ -66,6 +65,13 @@ class SessionController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/session');
                         exit;
+                    } else {
+                        self::renderSession([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderSession([

@@ -1,7 +1,9 @@
 
-‘php:S103="KSplit this 140 characters long line (which is greater than 120 authorized).(‰óŠÃüÿÿÿÿ8²ÑÒîâ1J$a33d0929-6857-4dd9-807c-617e036c48fb
-Œphp:S103r"KSplit this 127 characters long line (which is greater than 120 authorized).(¥´î8ıë…îâ1J$bbae1022-7c08-4a7b-a222-fe337d7c7ab1
-r	php:S1481i"+Remove this unused "$title" local variable.(ÿ€–Ÿÿÿÿÿÿ8ıë…îâ1J$30eedcb5-da35-4a1f-afb1-b5d48bcb227c
-n	php:S1481j"-Remove this unused "$rootUrl" local variable.(Û²°i8ıë…îâ1J$7a994ee3-15a3-456a-8bc0-b586dbaf4458
-`php:S125N"Remove this commented out code.(ˆ¦Ã£8€Æóşâ1J$79400226-8132-4504-af96-a4eb78017e57
-“	php:S4833m"QReplace "include_once" with namespace import mechanism through the "use" keyword.(ÓÄËˆ8ıë…îâ1J$c34c92c7-e445-4184-b79c-c333a61d2020
+Œphp:S103D"KSplit this 123 characters long line (which is greater than 120 authorized).(åŠ¡Å8Ê’­‘ã1J$470aa18b-6f5b-4103-beca-a54cc43b3590
+Œphp:S103J"KSplit this 123 characters long line (which is greater than 120 authorized).(ÁÓ¹Æ8Ê’­‘ã1J$b658d2f1-00d1-4f06-b8c4-7810d72bb27e
+php:S103€"KSplit this 127 characters long line (which is greater than 120 authorized).(¥´î8Ë’­‘ã1J$0c283658-461d-4d5f-88ae-8d808d641467
+r	php:S1481w"+Remove this unused "$title" local variable.(ÿ€–Ÿÿÿÿÿÿ8è¡–‘ã1J$fc094521-76f3-4cfe-8421-1141aebac933
+n	php:S1481x"-Remove this unused "$rootUrl" local variable.(Û²°i8Ì’­‘ã1J$8562e1f7-cea9-45e4-9ce5-43fe206f8fb1
+ephp:S1250"Remove this commented out code.(Öéİºÿÿÿÿÿ8ÆÀ‘ã1J$710626c9-0155-493b-9f5d-b80e282197d2
+`php:S125\"Remove this commented out code.(ˆ¦Ã£8Í’­‘ã1J$02db5771-e3fc-492b-9d08-85bf9baaf06c
+“	php:S4833{"QReplace "include_once" with namespace import mechanism through the "use" keyword.(ÓÄËˆ8Í’­‘ã1J$2f2bab07-c87e-4f8c-8be3-442bedf7154b

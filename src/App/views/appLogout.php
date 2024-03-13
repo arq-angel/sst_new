@@ -84,9 +84,7 @@
                     <div class="row">
                         <small>Go back to log in? <a href="<?= $rootUrl . '/auth/login'?>">Log In</a></small>
                     </div>
-                    <div class="row">
-                        <small>Go back to home? <a href="<?= $rootUrl . '/home'?>">Home</a></small>
-                    </div>
+
                 </div>
             </div>
 

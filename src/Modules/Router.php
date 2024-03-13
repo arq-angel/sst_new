@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Modules;
 
 use App\Config\Controllers;
+use App\Controllers\PublicViewController;
 use Modules\Middlewares\AuthMiddleware;
 
 class Router
@@ -25,6 +26,7 @@ class Router
     // Match the URL to a route and dispatch to the corresponding controller/action
     public static function dispatch($url)
     {
+
 //        dd($url);
         $urlParts = explode('/', trim($url, '/'));
 
@@ -46,14 +48,14 @@ class Router
                 }
 
                 if ($match) {
-//                    dd($config);
-//                    dd($params);
 
                     $urlController = $config['controller'];
                     $action = $config['action'];
 
-                    session_start();
+//                    dd($urlController);
+//                    dd($action);
 
+                    session_start();
 
                     if (in_array($urlController, Controllers::PUBLICCONTROLLERS)) {
                         $controller = $urlController;
@@ -74,6 +76,7 @@ class Router
                     }
 
                     if (in_array($urlController, Controllers::APICONTROLLERS)) {
+//                        dd($urlController);
                         $controller = $urlController;
                         $controller::$action($params);
                     }

@@ -35,6 +35,8 @@ class CreateRecord
                 $parameters[$fieldName] = $valueName;
             }
 
+//            dd($parameters);
+
             $result = HelperWebsite::getCreateRecord($parameters, $controller);
 
             return $result;
@@ -67,7 +69,7 @@ class CreateRecord
                 // Check if the ID already exists in the database
                 $idFieldName = 'studentId';
                 $idValues = $randomId;
-                $queryResult = HelperWebsite::getFetchColumnWithClause($controller, $idFieldName, $idValues);
+                $queryResult = HelperWebsite::getFetchColumnWithClause($controller, $idFieldName, [$idFieldName => $idValues]);
                 // If the ID already exists, continue the loop and generate a new one
             } while (count($queryResult) !== 0);
 

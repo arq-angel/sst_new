@@ -33,15 +33,21 @@ class ViewController
         if (isset($params['action']) && $params['action'] === 'viewAll') {
 
             // Pagination parameters
+            // so the users can easily understand that first page starts at 1 instead of 0 which might create confusion
             $currentPage = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-            $recordsPerPage = 10; // Adjust as needed
-            $totalPages = ceil(HelperWebsite::getCountRecord($params['pageName']) / $recordsPerPage);
+            $recordsPerPage = 5;
 
             // Calculate offset
+            //  0, which correctly starts fetching records from the beginning of the dataset because
+            // offset of 1 will skip the first row of data
             $offset = ($currentPage - 1) * $recordsPerPage;
 
             $pageName = $params['pageName'];
             $data = HelperWebsite::getViewRecordWithLimit($pageName, $recordsPerPage, $offset);
+
+//            dd($data);
+
+            $hasNextPage = count($data) >= 5;
 
             // calling the loadAllView method to display the data from database
             $viewAllData = self::loadAllView([
@@ -51,15 +57,23 @@ class ViewController
 
             echo $viewAllData;
 
-            // Pagination links
+            /// Pagination links
             $paginationHtml = '<div class="container">';
             $paginationHtml .= '<div class="row justify-content-center">';
-            $paginationHtml .= '<nav aria-label="Page navigation">';
+            $paginationHtml .= '<nav class="d-flex justify-content-center" aria-label="Page navigation">';
             $paginationHtml .= '<ul class="pagination">';
-            for ($i = 1; $i <= $totalPages; $i++) {
-                $active = ($i == $currentPage) ? 'active' : '';
-                $paginationHtml .= '<li class="page-item ' . $active . '"><a class="page-link" href="?page=' . $i . '">' . $i . '</a></li>';
+            // Previous button
+            if ($currentPage > 1) {
+                $prevPage = $currentPage - 1;
+                $paginationHtml .= '<li class="page-item"><a class="page-link" href="?page=' . $prevPage . '"><<</a></li>';
             }
+            $paginationHtml .= '<li class="page-item"><a class="page-link" href="">'. $currentPage .'</a></li>';
+            // Next button - shown if there are records for the next page
+            if ($hasNextPage) {
+                $nextPage = $currentPage + 1;
+                $paginationHtml .= '<li class="page-item"><a class="page-link" href="?page=' . $nextPage . '">>></a></li>';
+            }
+
             $paginationHtml .= '</ul>';
             $paginationHtml .= '</nav>';
             $paginationHtml .= '</div>';

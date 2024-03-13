@@ -1,12 +1,17 @@
 
-lphp:S103Á"KSplit this 155 characters long line (which is greater than 120 authorized).(À¢–ûÿÿÿÿ8¸ºôíâ1
-lphp:S103Â"KSplit this 156 characters long line (which is greater than 120 authorized).(üœå×üÿÿÿÿ8¹ºôíâ1
-b	php:S1854¶"@Remove this useless assignment to local variable '$queryResult'.(ñù±ÿÿÿÿÿ8Ààøíâ1
-:php:S125$"Remove this commented out code.(§·’—8¹ºôíâ1
-:php:S125E"Remove this commented out code.(ï¹ñ8¹ºôíâ1
-@php:S125®"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
-;php:S125¨"Remove this commented out code.(ˆ¦Ã£8¹ºôíâ1
-@php:S125Ä"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
-@php:S125Ç"Remove this commented out code.(°½áéÿÿÿÿÿ8¹ºôíâ1
-@php:S125ë"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
-@php:S125•"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8¹ºôíâ1
+’php:S103À"KSplit this 155 characters long line (which is greater than 120 authorized).(À¢–ûÿÿÿÿ8ˆ±Ô£ã1J$6df97923-da41-4eae-a30f-4118705238f7
+’php:S103Á"KSplit this 156 characters long line (which is greater than 120 authorized).(üœå×üÿÿÿÿ8ˆ±Ô£ã1J$5ab33d4c-dd49-45fc-a0e2-6b63ba00f2f6
+php:S103Ü"KSplit this 125 characters long line (which is greater than 120 authorized).(§«Ïé8¢òŞ£ã1J$b74e6d9c-a9ef-4741-ae09-aafd19a756d6
+°	php:S1448
+"iClass "HelperWebsite" has 22 methods, which is greater than 20 authorized. Split it into smaller classes.(“ë¦ûÿÿÿÿ8‰±Ô£ã1J$6ed2e382-fa81-4669-a924-15a51c694838
+ˆ	php:S1854´"@Remove this useless assignment to local variable '$queryResult'.(ñù±ÿÿÿÿÿ8Š±Ô£ã1J$d9a383be-3303-4b5a-a84b-f8c6e8717df0
+`php:S125$"Remove this commented out code.(§·’—8‹±Ô£ã1J$7776a8be-e03b-40df-a50e-1e67d2da7b06
+fphp:S125­"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8‹±Ô£ã1J$6bc3e102-74f5-4d26-9faf-1a32ad654afc
+aphp:S125§"Remove this commented out code.(ˆ¦Ã£8‹±Ô£ã1J$2e32dadc-1702-4edd-8e78-7285848ebba5
+fphp:S125Ã"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8‹±Ô£ã1J$0f450707-87ca-442d-990f-a035b2867d60
+fphp:S125Æ"Remove this commented out code.(°½áéÿÿÿÿÿ8‹±Ô£ã1J$60d0ec48-424b-4a5d-bf14-8f91fa9fe33b
+fphp:S125ê"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8‹±Ô£ã1J$aa342f0b-4cf5-451c-93ed-3e2c177aff91
+fphp:S125“"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8‹±Ô£ã1J$ad2919c3-fae0-466c-a787-09da521fe3c4
+aphp:S125—"Remove this commented out code.(ßÁÉû8Œ±Ô£ã1J$e2083886-249b-4c1d-a38d-8f869cf33b7a
+fphp:S125â"Remove this commented out code.(‡ÃÔ¶ûÿÿÿÿ8Ï‚ï£ã1J$92d44565-5532-4b05-9ca7-4396d3f5c7b3
+aphp:S125æ"Remove this commented out code.(ßÁÉû8Ÿçï£ã1J$aa9f176a-67c2-4c18-a9ca-3037aaefe53b

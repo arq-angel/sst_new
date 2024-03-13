@@ -66,6 +66,13 @@ class CollegeController
                     if ($result) {
                         header('Location: ' . Site::ROOT_URL . '/app/college');
                         exit;
+                    } else {
+                        self::renderCollege([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
                     }
                 } else {
                     self::renderCollege([
@@ -94,13 +101,6 @@ class CollegeController
 
     public static function delete(array $params)
     {
-        // http://mvc.cc/app/student/delete/5?page=1&no=3
-//        $page = isset($_GET['page']) ? $_GET['page'] : null;
-//        $no = isset($_GET['no']) ? $_GET['no'] : null;
-//
-//        echo "Page: " . $page;
-//        echo "No: " . $no;
-//        dd($params);
         echo "delete";
     }
 

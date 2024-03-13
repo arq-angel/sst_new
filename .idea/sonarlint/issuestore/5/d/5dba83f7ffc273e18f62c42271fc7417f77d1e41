@@ -1,7 +1,8 @@
 
-u	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.(ŸÂ¾Æúÿÿÿÿ8°³®×â1
-G	php:S2003X"&Replace "include" with "include_once".(ðù“¯ÿÿÿÿÿ8°³®×â1
-Q	php:S6600X"0Remove the parentheses from this "include" call.(ðù“¯ÿÿÿÿÿ8±³®×â1
-:php:S125"Remove this commented out code.(×ê·µ8±³®×â1
-?php:S1251"Remove this commented out code.(šåò‘úÿÿÿÿ8÷Š¡Øâ1
-m	php:S4833X"LReplace "include" with namespace import mechanism through the "use" keyword.(ðù“¯ÿÿÿÿÿ8±³®×â1
+›	php:S3776"TRefactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.(ŸÂ¾Æúÿÿÿÿ8®óî‰ã1J$7cf2e0be-e001-4c2f-919e-6016b4e33e89
+m	php:S2003["&Replace "include" with "include_once".(ðù“¯ÿÿÿÿÿ8°óî‰ã1J$4748aa5e-c854-41a8-abe4-6095273ecc25
+w	php:S6600["0Remove the parentheses from this "include" call.(ðù“¯ÿÿÿÿÿ8±óî‰ã1J$1929d97c-bbff-4af3-95c9-9360b157a4e5
+:php:S125"Remove this commented out code.(×ê·µ8÷ò««ã1
+ephp:S1257"Remove this commented out code.(Ã¹€×ûÿÿÿÿ8²óî‰ã1J$4788447a-1312-4de6-a4e3-08de683f75c5
+ephp:S125O"Remove this commented out code.(Ã¹€×ûÿÿÿÿ8ë²ä©ã1J$2fbfc47e-a571-4c9f-b012-98f52365fe1a
+“	php:S4833["LReplace "include" with namespace import mechanism through the "use" keyword.(ðù“¯ÿÿÿÿÿ8³óî‰ã1J$2dc458fb-36c0-43b6-a2af-9c4947a92ab2

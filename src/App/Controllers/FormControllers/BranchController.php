@@ -8,6 +8,7 @@ use App\Config\Site;
 use App\Controllers\ViewControllers\ViewController;
 use Modules\CRUD\CreateRecord;
 use Modules\Services\CsrfProtection;
+use Modules\Services\ValidateForm;
 
 class BranchController
 {
@@ -50,46 +51,45 @@ class BranchController
             $token = htmlspecialchars($_POST['token']);
 
             if (CsrfProtection::validateToken($token)) {
-                // The form was submitted, token is validated, now handle login logic
 
-//                dd($_POST);
-                $result = CreateRecord::loadCreateRecord('branch');
+                // validate form data
+                $data = $_POST;
 
-                if ($result) {
-                    header('Location: ' . Site::ROOT_URL . '/app/branch');
-                    exit;
+                $errors = ValidateForm::loadValidateForm([
+                    'controller' => 'branch',
+                    'data' => $data,
+                ]);
+
+                if (!$errors) {
+                    $result = CreateRecord::loadCreateRecord('branch', $data);
+
+                    if ($result) {
+                        header('Location: ' . Site::ROOT_URL . '/app/branch');
+                        exit;
+                    } else {
+                        self::renderBranch([
+                            'data' => $data,
+                            'errors' => [
+                                'errorMessage' => 'Could not create record, try again!'
+                            ],
+                        ]);
+                    }
+                } else {
+                    self::renderBranch([
+                        'data' => $data,
+                        'errors' => $errors,
+                    ]);
                 }
 
             } else {
-
-                // destroy previous token
-                CsrfProtection::getDestroyToken();
-
-                // initiate the csrfToken
-                CsrfProtection::generateToken();
-
-                $csrfToken = CsrfProtection::getToken();
-
-                ViewController::loadViewController([
-                    'action' => 'add',
-                    'pageName' => 'branch',
-                    'csrfToken' => $csrfToken,
-
+                self::renderBranch([
+                    'errors' => [
+                        'errorMessage' => 'Invalid token! please fill the form again'
+                    ]
                 ]);
             }
         } else {
-            // initiate the csrfToken
-            CsrfProtection::generateToken();
-
-            $csrfToken = CsrfProtection::getToken();
-
-            ViewController::loadViewController([
-                'action' => 'add',
-                'pageName' => 'branch',
-                'csrfToken' => $csrfToken,
-
-            ]);
-
+            self::renderBranch();
         }
 
     }
@@ -117,7 +117,7 @@ class BranchController
 
         ViewController::loadViewController([
             'action' => 'add',
-            'pageName' => 'college',
+            'pageName' => 'branch',
             'csrfToken' => $csrfToken,
             'data' => $data,
             'errors' => $errors,

@@ -13,8 +13,6 @@ class AllView
     public static function createAllView(array $params)
     {
 
-
-
 //        dd($params);
         $pageName = $params['pageName'];
         $allRecords = $params['data'];

@@ -72,11 +72,10 @@
                             <i class="fa-solid fa-ticket-simple"></i> Applications
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/application' ?>">All
+                            <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/application' ?>">Review
                                     applications</a></li>
                             <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/application/add' ?>">Add
                                     application</a></li>
-                            <li><a class="dropdown-item" href="#">Review applications</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -90,29 +89,11 @@
                             <i class="fa-solid fa-graduation-cap"></i> Students
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/student' ?>">View Students</a></li>
                             <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/student/add' ?>">Add Students</a>
                             </li>
-                            <li><a class="dropdown-item" href="<?= e($rootUrl) . '/app/student' ?>">View Students</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="nav-link text-dark" href="<?= e($rootUrl) . '/home' ?>"><i
-                                class="fa-solid fa-person-walking-arrow-right"></i>
-                            Home</a>
-                    </li>
-                    <!--                    <li>-->
-                    <!--                        <a class="nav-link text-dark" href="--><?php
-                    //= ROOT_URL . '/auth/logout' ?><!--"><i-->
-                    <!--                                    class='fa-solid fa-right-from-bracket'></i> log out</a>-->
-                    <!--                    </li>-->
-                    <?php
-
-                    //                    if (Website::getIsAuthenticated()) {
-                    //                        echo "<li><a class='nav-link text-primary'><i class='fa-solid fa-user'></i> Logged In</a></li>";
-                    //                    }
-
-                    ?>
-
                 </ul>
                 <div class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <div class="rounded-pill bg-body-secondary px-3 py-0 mx-1">
@@ -138,19 +119,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- will implement in the future -->
-                <!--                <form class="d-flex ms-2" role="search">-->
-                <!--                    <input-->
-                <!--                            class="form-control me-2"-->
-                <!--                            type="search"-->
-                <!--                            placeholder="Search"-->
-                <!--                            aria-label="Search"-->
-                <!--                    />-->
-                <!--                    <button class="btn btn-outline-primary" type="submit">-->
-                <!--                        Search-->
-                <!--                    </button>-->
-                <!--                </form>-->
             </div>
         </div>
     </nav>
@@ -227,24 +195,24 @@
                                 class="nav-link text-dark px-0 px-3"
                                 href=""
                                 data-bs-toggle="collapse"
-                                data-bs-target="#departments"
+                                data-bs-target="#faculties"
                                 aria-expanded="false"
-                                aria-controls="departments"
+                                aria-controls="faculties"
                             >
-                                <i class="fa-solid fa-building-columns"></i> Departments
+                                <i class="fa-solid fa-building-columns"></i> Faculties
                                 <i class="fa fa-fw fa-caret-down"></i>
                             </a>
-                            <ul class="collapse list-unstyled" id="departments">
+                            <ul class="collapse list-unstyled" id="faculties">
                                 <li>
-                                    <a class="nav-link text-dark ps-3 pe-3" href="<?= e($rootUrl) . '/app/department' ?>"
+                                    <a class="nav-link text-dark ps-3 pe-3" href="<?= e($rootUrl) . '/app/faculty' ?>"
                                     ><i class="fa-solid fa-magnifying-glass"></i> View
-                                        Departments</a
+                                        Faculties</a
                                     >
                                 </li>
                                 <li>
                                     <a class="nav-link text-dark ps-3 pe-3"
-                                       href="<?= e($rootUrl) . '/app/department/add' ?>"
-                                    ><i class="fa-solid fa-plus"></i> Add Department</a
+                                       href="<?= e($rootUrl) . '/app/faculty/add' ?>"
+                                    ><i class="fa-solid fa-plus"></i> Add faculty</a
                                     >
                                 </li>
                             </ul>

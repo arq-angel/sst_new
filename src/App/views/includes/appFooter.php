@@ -12,15 +12,6 @@
 </div>
 </div>
 <div id="liveNotification">
-    <?php
-
-//    require_once __DIR__ . "/../../modules/App.php";
-//    require_once __DIR__ . "/../../services/Notification.php";
-//
-//    //    var_dump($_SESSION);
-//
-//    Notification::render();
-    ?>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
